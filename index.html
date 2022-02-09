@@ -5,25 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <!-- <link rel="stylesheet" href="index.css" /> -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" />
     <!-- tiny slider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script> -->
 
     <!-- OWL CAROUSEL -->
-    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
-        <div id="logo"><h2>Furry Friends</h2></div>
-        <nav>
+      <div id="logo"><h2>Furry Friends</h2></div>
+      <nav>
         <ul>
           <a href="#about"><li>About</li></a>
           <a href="#adopt"><li>Adopt</li></a>
@@ -35,7 +38,7 @@
     <content>
       <section id="about">
         <div class="left-container">
-            <img src="assets/crop.jpg" alt="">
+          <img src="assets/crop.jpg" alt="" />
         </div>
         <div class="right-container">
           <h1>Adopt a new, loving member of the family today!</h1>
@@ -51,41 +54,58 @@
             ratione fuga voluptas maxime reprehenderit quo temporibus
             repudiandae dolorum eaque nostrum reiciendis.
           </p>
-          <br>
+          <br />
         </div>
       </section>
       <section id="adopt">
-          <h1>Here are some of our furry friends up for adoption:</h1>
-          <!-- CAROUSEL -->
-          <div class="my-slider">
-            <div class="slide" id="slide-one">one</div>
-            <div class="slide" id="slide-two">two</div>
-            <div class="slide" id="slide-three">three</div>
-            <!-- <div class="slide" id="slide-four">four</div> -->
-          </div>
-          <button id="loadImgBtn" class="btn">Load More</button>
+        <h1>Here are some of our furry friends up for adoption:</h1>
+        <!-- CAROUSEL -->
+        <div class="owl-carousel">
+          <!-- <div class="slide-container"> -->
+            <div class="slide" id="slide-one"></div>
+            <div class="slide" id="slide-two"></div>
+            <div class="slide" id="slide-three"></div>
+          <!-- </div>    -->
+          <!-- <div class="slide" id="slide-four">four</div> -->
+        </div>
+        <button id="loadImgBtn" class="btn">Load More</button>
       </section>
       <section id="donate">
-        <div class="left-container donate-card"><h2>Donate in kind</h2></div>
-        <div class="right-container donate-card"><h2>Donation</h2></div>
+        <div class="left-container donate-card">
+          <h2>Donate in kind</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+            consequuntur nesciunt labore atque, id dignissimos possimus saepe
+            molestias optio, vel fugit at dolorem eligendi neque rem obcaecati
+            magni voluptates commodi?
+          </p>
+        </div>
+        <div class="right-container donate-card">
+          <h2>Monetary Donations</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+            consequuntur nesciunt labore atque, id dignissimos possimus saepe
+            molestias optio, vel fugit at dolorem eligendi neque rem obcaecati
+            magni voluptates commodi?
+          </p>
+        </div>
       </section>
       <section id="contact"></section>
-      <button id="back-btn" class="btn hidden">Back</button>   
+      <button id="back-btn" class="btn hidden">Back</button>
     </content>
     <footer>
       <div class="left-footer-container">
-          <address>
-            <p>
-                The Furry Friends Shelter
-                123 Mabini Street, Makati City
-                (02) 889-5678
-            </p>
-          </address>
+        <address>
+          <p>
+            The Furry Friends Shelter 123 Mabini Street, Makati City (02)
+            889-5678
+          </p>
+        </address>
       </div>
       <div class="right-footer-container"></div>
     </footer>
-    <!-- <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script> -->
+    <script src="owlcarousel/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
