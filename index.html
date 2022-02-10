@@ -4,57 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- fonts -->
+<!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
-    <!-- css -->
-    <!-- <link rel="stylesheet" href="index.css" /> -->
-    <link rel="stylesheet" href="styles/styles.css" />
-    
-    <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
-
-    <script src="owlcarousel/jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div id="logo"><h2> Furry Friends </h2></div>
-      <nav>
-        <ul>
-          <a href="#about"><li>About</li></a>
-          <a href="#adopt"><li>Adopt</li></a>
-          <a href="#donate"><li>Donate</li></a>
-          <a href="#contact"><li>Contact Us</li></a>
-        </ul>
-      </nav>
-    </header>
-    <content>
+<!-- css -->
+      <link rel="stylesheet" href="styles/styles.css" />
+<!-- font awesome -->
+    <script src="https://kit.fontawesome.com/6cc2875a6b.js" crossorigin="anonymous"></script>
+<!-- owl carousel -->
+      <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+      <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
+     
+      <title>Furry Friends Animal Shelter</title>
+    </head>
+    <body>
+      <header>
+        <div id="logo"><h2> Furry Friends </h2></div>
+        <nav>
+          <ul class="nav-link-list">
+            <a href="#about"><li class="nav-link">About</li></a>
+            <a href="#adopt"><li class="nav-link">Adopt</li></a>
+            <a href="#donate"><li class="nav-link">Donate</li></a>
+            <a href="#contact"><li class="nav-link">Contact Us</li></a>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <content>
       <section id="about">
         <div class="left-container">
           <img src="assets/crop.jpg" alt="" />
         </div>
         <div class="right-container">
-          <h1>Adopt a new, loving member of the family today!</h1>
+          <h1>Adopt the newest member of your family today!</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
             aspernatur voluptates et officia ex dicta vitae dolore tenetur,
             ratione fuga voluptas maxime reprehenderit quo temporibus
             repudiandae dolorum eaque nostrum reiciendis.
           </p>
+          <br>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
             aspernatur voluptates et officia ex dicta vitae dolore tenetur,
             ratione fuga voluptas maxime reprehenderit quo temporibus
             repudiandae dolorum eaque nostrum reiciendis.
           </p>
-          <br />
+          <br/>
         </div>
       </section>
       <section id="adopt">
@@ -62,15 +66,15 @@
         <!-- CAROUSEL -->
         <div class="owl-carousel">
           <!-- <div class="slide-container"> -->
-            <div class="slide" id="slide-one"></div>
-            <div class="slide" id="slide-two"></div>
-            <div class="slide" id="slide-three"></div>
+            <div class="slide" id="slide-one">one</div>
+            <div class="slide" id="slide-two">two</div>
+            <div class="slide" id="slide-three">three</div>
             <!-- </div>    -->
             <!-- <div class="slide" id="slide-four">four</div> -->
           </div>
           <button id="loadImgBtn" class="btn">Load More</button>
-        </section>
-        <section id="donate">
+      </section>
+      <section id="donate">
           <div class="left-container donate-card">
             <h2>Donate in kind</h2>
             <p>
@@ -91,36 +95,39 @@
             </p>
             <button id="donationBtn" class="btn">Learn More</button>
           </div>
-        </section>
-        <section id="contact">
-          <h2>Get in touch with us</h2>
+      </section>
+      <section id="contact">
+          <h1>Get in touch with us</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-            consequuntur nesciunt labore atque?</p>
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" name="userName" id="userNameInput" placeholder="Name">
-              <label for="email">Email:</label>
-              <input type="email" name="userEmail" id="userNameInput" placeholder="user@example.com">
-              <label for="">Message:</label>
-              <textarea placeholder="Please type your message here">
-                <input type="submit" value="message">
-              </form>
-            </section>
-            <button id="back-btn" class="btn hidden">Back</button>
-          </content>
-          <footer>
-            <div class="left-footer-container">
-              <address>
-                <p>
-                  The Furry Friends Shelter 123 Mabini Street, Makati City (02)
-                  889-5678
-                </p>
-              </address>
-            </div>
-            <div class="right-footer-container"></div>
-          </footer>
-          <script src="scripts/script.js"></script>
-  </body>
+            consequuntur nesciunt labore atque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+            consequuntur nesciunt labore atque.</p>
+            <div class="link-icons">
+              <span><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></span>
+              <span><a href="https://www.twitter.com" target="_blank"><i class="fa fa-brands fa-twitter"></i></a></span>
+              <span><a href="https://wordpress.com" target="_blank"><i class="fa fa-brands fa-wordpress"></i></a></span>
+              <span><a href="mailto:aly.delvalle.9@gmail.com" target="_blank"><i class="fa fa-google"></i></a></span>
+          </div>
+      </section>
+            <div id="back-btn" class="btn hidden"><p>BACK TO TOP</p></div>
+      </content>
+      <footer>
+        <div class="left-footer-container">
+          <address>
+            <p>
+              The Furry Friends Shelter 
+              <br>
+              123 Mabini Street, Makati City (02)
+              <br>
+              889-5678
+            </p>
+          </address>
+        </div>
+        <div class="right-footer-container"></div>
+      </footer>
+      <script src="owlcarousel/jquery.min.js"></script>
+        <script src="owlcarousel/owl.carousel.min.js"></script>
+        <script src="scripts/script.js"></script>
+      </body>
   </html>
   

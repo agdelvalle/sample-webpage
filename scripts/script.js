@@ -6,11 +6,11 @@ let $owl = $('.owl-carousel').owlCarousel({
     center: false,
     nav:false,
     autoplay:true,
-    autoplayTimeout:5000,
+    autoplayTimeout:3000,
     // itemsDesktop: [1199,3],
     // itemsDesktopSmall: [979,3],
     // itemsTablet: [768,3],
-    // itemsMobile: [479,1],
+    // itemsMobile: [279,1],
     responsive:{
         0:{
             items: 1,
@@ -21,11 +21,41 @@ let $owl = $('.owl-carousel').owlCarousel({
     }
 })
 
+// responsive burger menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-link-list");
+const getOwlCarousel = document.querySelector(".owl-carousel");
+const getOwlStage = document.querySelector(".owl-stage-outer");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    getOwlStage.classList.toggle("hidden");
+    getOwlStage.classList.toggle("moveBack");
+    getOwlCarousel.classList.toggle("hidden");
+    // getOwlCarousel.classList.toggle("moveBack");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    getOwlStage.classList.remove("hidden");
+    getOwlStage.classList.remove("moveBack");
+    getOwlCarousel.classList.remove("hidden");
+    // getOwlCarousel.classList.remove("moveBack");
+}
+
 let loadImgBtn = document.getElementById("loadImgBtn");
-let getSlider = document.querySelector("#owl-demo");
 let slideOne = document.getElementById("slide-one");
 let slideTwo = document.getElementById("slide-two");
 let slideThree = document.getElementById("slide-three");
+const getSlider = document.querySelector("#owl-demo");
 
 // fetch images for slider
 (function getFirstThreeImages(){
@@ -79,27 +109,29 @@ const getNewImage = () => {
 
 loadImgBtn.addEventListener('click', getNewImage);
 
-// back button
+// show back button 
 backBtn = document.getElementById("back-btn");
 
-let halfPageHeight = document.body.scrollHeight/2
+let PageHeight = document.body.scrollHeight;
+let halfPageHeight = PageHeight/2;
+
 console.log(halfPageHeight)
 
-const myScrollFunc = () => {
+const showBackButton = () => {
   let y = window.scrollY;
   if (y >= halfPageHeight) {
-    backBtn.className = "btn"
+    backBtn.classList.remove('hidden')
   } else {
-    backBtn.className = "btn hidden"
+    backBtn.classList.add('hidden')
   }
 };
 
+window.addEventListener("scroll", showBackButton);
+
 // scroll up when back button is clicked
+const scrollToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0; 
+}
 
-// const scrollUp = () => {
-
-// }
-
-backBtn.addEventListener('click', getNewImage);
-
-window.addEventListener("scroll", myScrollFunc);
+backBtn.addEventListener('click', scrollToTop);
