@@ -22,11 +22,17 @@ a {
 .btn {
   font-size: 1.8rem;
   padding: 15px;
+  margin: 15px 0;
   width: 15rem;
   text-align: center;
   border: 0.1rem solid #00873a;
   text-decoration: none;
   color: darkslategray;
+}
+
+.btn:hover {
+  background-color: #00873a;
+  color: whitesmoke;
 }
 
 #logo {
@@ -39,18 +45,36 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: whitesmoke;
 }
 
-nav ul {
+header nav {
+  width: 30%;
+}
+
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style-type: none;
   color: darkslategray;
+}
+
+header nav ul li:hover {
+  border-bottom: 5px solid #00873a;
 }
 
 section {
@@ -79,6 +103,12 @@ h1 {
 /* ABOUT */
 #about {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #about .left-container {
@@ -89,6 +119,7 @@ h1 {
 
 #about .left-container img {
   height: 60%;
+  margin: 15%;
 }
 
 #about .right-container {
@@ -100,7 +131,6 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  padding: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -116,6 +146,7 @@ h1 {
 
 #about .right-container h1 {
   text-align: center;
+  color: #00873a;
 }
 
 #adopt {
@@ -154,10 +185,11 @@ h1 {
 }
 
 #adopt .owl-carousel .slide {
-  background-color: red;
+  background-color: lightslateblue;
   height: 350px;
+  margin: 0 2%;
   border: 1px solid blue;
-  border-radius: 5px;
+  border-radius: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: -webkit-box;
@@ -182,7 +214,68 @@ h1 {
      object-fit: cover;
 }
 
+#adopt .owl-carousel .owl-nav {
+  font-size: 24px;
+}
+
 #donate {
-  padding: 15% 0;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#donate .donate-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  gap: 2%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5%;
+}
+
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+#back-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 /*# sourceMappingURL=styles.css.map */

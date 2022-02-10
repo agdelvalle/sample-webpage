@@ -14,18 +14,18 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="index.css" /> -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <!-- tiny slider -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script> -->
-
+    
     <!-- OWL CAROUSEL -->
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
+
+    <script src="owlcarousel/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <header>
-      <div id="logo"><h2>Furry Friends</h2></div>
+      <div id="logo"><h2> Furry Friends </h2></div>
       <nav>
         <ul>
           <a href="#about"><li>About</li></a>
@@ -58,54 +58,69 @@
         </div>
       </section>
       <section id="adopt">
-        <h1>Here are some of our furry friends up for adoption:</h1>
+        <h1>Here are some of our furry friends up for adoption!</h1>
         <!-- CAROUSEL -->
         <div class="owl-carousel">
           <!-- <div class="slide-container"> -->
             <div class="slide" id="slide-one"></div>
             <div class="slide" id="slide-two"></div>
             <div class="slide" id="slide-three"></div>
-          <!-- </div>    -->
-          <!-- <div class="slide" id="slide-four">four</div> -->
-        </div>
-        <button id="loadImgBtn" class="btn">Load More</button>
-      </section>
-      <section id="donate">
-        <div class="left-container donate-card">
-          <h2>Donate in kind</h2>
+            <!-- </div>    -->
+            <!-- <div class="slide" id="slide-four">four</div> -->
+          </div>
+          <button id="loadImgBtn" class="btn">Load More</button>
+        </section>
+        <section id="donate">
+          <div class="left-container donate-card">
+            <h2>Donate in kind</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+              consequuntur nesciunt labore atque, id dignissimos possimus saepe
+              molestias optio, vel fugit at dolorem eligendi neque rem obcaecati
+              magni voluptates commodi?
+            </p>
+            <button id="inKindBtn" class="btn">Learn More</button>
+          </div>
+          <div class="right-container donate-card">
+            <h2>Monetary Donations</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+              consequuntur nesciunt labore atque, id dignissimos possimus saepe
+              molestias optio, vel fugit at dolorem eligendi neque rem obcaecati
+              magni voluptates commodi?
+            </p>
+            <button id="donationBtn" class="btn">Learn More</button>
+          </div>
+        </section>
+        <section id="contact">
+          <h2>Get in touch with us</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-            consequuntur nesciunt labore atque, id dignissimos possimus saepe
-            molestias optio, vel fugit at dolorem eligendi neque rem obcaecati
-            magni voluptates commodi?
-          </p>
-        </div>
-        <div class="right-container donate-card">
-          <h2>Monetary Donations</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-            consequuntur nesciunt labore atque, id dignissimos possimus saepe
-            molestias optio, vel fugit at dolorem eligendi neque rem obcaecati
-            magni voluptates commodi?
-          </p>
-        </div>
-      </section>
-      <section id="contact"></section>
-      <button id="back-btn" class="btn hidden">Back</button>
-    </content>
-    <footer>
-      <div class="left-footer-container">
-        <address>
-          <p>
-            The Furry Friends Shelter 123 Mabini Street, Makati City (02)
-            889-5678
-          </p>
-        </address>
-      </div>
-      <div class="right-footer-container"></div>
-    </footer>
-    <script src="owlcarousel/jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script src="script.js"></script>
+            consequuntur nesciunt labore atque?</p>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" name="userName" id="userNameInput" placeholder="Name">
+              <label for="email">Email:</label>
+              <input type="email" name="userEmail" id="userNameInput" placeholder="user@example.com">
+              <label for="">Message:</label>
+              <textarea placeholder="Please type your message here">
+                <input type="submit" value="message">
+              </form>
+            </section>
+            <button id="back-btn" class="btn hidden">Back</button>
+          </content>
+          <footer>
+            <div class="left-footer-container">
+              <address>
+                <p>
+                  The Furry Friends Shelter 123 Mabini Street, Makati City (02)
+                  889-5678
+                </p>
+              </address>
+            </div>
+            <div class="right-footer-container"></div>
+          </footer>
+          <script src="scripts/script.js"></script>
   </body>
-</html>
+  </html>
+  

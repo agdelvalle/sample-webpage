@@ -1,13 +1,16 @@
-// const { tns } = require("tiny-slider");
-
 // image slider
-
 let $owl = $('.owl-carousel').owlCarousel({
     loop: false,
     rewind: true,
     margin:0,
     center: false,
-    nav:true,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    // itemsDesktop: [1199,3],
+    // itemsDesktopSmall: [979,3],
+    // itemsTablet: [768,3],
+    // itemsMobile: [479,1],
     responsive:{
         0:{
             items: 1,
@@ -17,16 +20,14 @@ let $owl = $('.owl-carousel').owlCarousel({
         }
     }
 })
-// fetch images for slider
+
 let loadImgBtn = document.getElementById("loadImgBtn");
-// let getSlider = document.querySelector(".my-slider");
 let getSlider = document.querySelector("#owl-demo");
 let slideOne = document.getElementById("slide-one");
 let slideTwo = document.getElementById("slide-two");
 let slideThree = document.getElementById("slide-three");
 
-// let randomCatAge = Math.floor((Math.random() * 9) + 1);
-
+// fetch images for slider
 (function getFirstThreeImages(){
     console.log("click");
     fetch('https://api.thecatapi.com/v1/images/search', 
@@ -60,15 +61,16 @@ let slideThree = document.getElementById("slide-three");
         })
 })();
 
+// get a new image
 const getNewImage = () => {
-    console.log("click");
+    console.log("load button click");
     fetch('https://api.thecatapi.com/v1/images/search', 
         {headers: {
             'x-api-key':'863d2870-6544-4ed7-a15a-c024729f17ed', 
         }})
         .then((res) => res.json())
         .then((data) => {
-            // $('.owl-carousel')
+            console.log(data)
             $owl
             .owlCarousel('add', `<div class="slide"><img src=${data[0].url}><p>Age:${Math.floor((Math.random() * 9) + 1)}</p></div>`)
             .owlCarousel('update')
@@ -80,13 +82,24 @@ loadImgBtn.addEventListener('click', getNewImage);
 // back button
 backBtn = document.getElementById("back-btn");
 
+let halfPageHeight = document.body.scrollHeight/2
+console.log(halfPageHeight)
+
 const myScrollFunc = () => {
   let y = window.scrollY;
-  if (y >= 100) {
+  if (y >= halfPageHeight) {
     backBtn.className = "btn"
   } else {
     backBtn.className = "btn hidden"
   }
 };
+
+// scroll up when back button is clicked
+
+// const scrollUp = () => {
+
+// }
+
+backBtn.addEventListener('click', getNewImage);
 
 window.addEventListener("scroll", myScrollFunc);
