@@ -30,8 +30,8 @@ a{
 }
 
 .btn {
-    font-size: 1.8rem;
-    padding: 15px;
+    // font-size: 1.8rem;
+    // padding: 15px;
     margin: 15px 0;
     width: 15rem;
     text-align: center;
@@ -259,6 +259,11 @@ footer{
         width: 100%;
     }
 
+    .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
     nav{
         width: 10%;
         .nav-link-list{
@@ -402,6 +407,11 @@ footer{
 
     h2{
         font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1.8rem;
+        padding: 15px;
     }
 
     nav{
