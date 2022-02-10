@@ -130,8 +130,13 @@ window.addEventListener("scroll", showBackButton);
 
 // scroll up when back button is clicked
 const scrollToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0; 
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0; 
+    window.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+      });
 }
 
 backBtn.addEventListener('click', scrollToTop);
